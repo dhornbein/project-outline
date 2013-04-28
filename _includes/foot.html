@@ -1,0 +1,10 @@
+	{% unless no_js %}
+	<script>
+	  document.write('<script src=/js/vendor/'
+	    + ('__proto__' in {} ? 'zepto' : 'jquery')
+	    + '.js><\/script>');
+	</script>
+	<script src="/js/foundation.js"></script>
+	{% endunless %}
+  </body>
+</html>

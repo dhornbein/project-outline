@@ -1,0 +1,5 @@
+server_port:  5000
+auto: true
+# baseurl: /DataAnywhere
+header: "Standard project rating system"
+title: Project Outline

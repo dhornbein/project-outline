@@ -1,0 +1,68 @@
+---
+
+---
+
+{% include head.html %}
+	<header class="row">
+		<div class="large-12 column">
+			<h4>Open Source Hardware Rating Page</h4>
+			<h1 class="no-margin">{{ page.title }} <small><a href="//twitter.com/search/realtime?q=%23{{ page.hashtag }}" target="_blank">#{{ page.hashtag }}</a></small></h1>
+			<p class="byline">By: <a href="{{ page.author.link }}">{{ page.author.name }}</a></p>
+		</div>
+	</header>
+	<section id="project_details" class="row">
+		<section class="large-4 column">
+			<img class="th" src="{{ page.image }}">
+		</section>
+		<section class="large-4 column">
+			<h4>Links</h4>
+			<ul>
+			{% for link in page.links %}
+				<li><a href="{{ link.href }}">{{ link.name }}</a></li>
+			{% endfor %}
+			</ul>
+		</section>
+		<section class="large-4 column">
+		</section>
+	</section>
+	<hr>
+	<section id="project_rating">
+		{% for rating in page.ratings %}
+		<div class="m-rating row">
+			<div class="m-rating-title large-4 column">
+				<h4 class="no-margin">{{ rating.name | capitalize }}</h4 class="no-margin">
+			</div>
+			<div class="m-rating-rating large-8 column">
+				<div class="progress"><span class="meter text-right" style="width:{{ rating.level | times:100 }}%"><strong>{{ rating.level | times:10 }}</strong>/10</span></div>
+				{% if rating.note %}
+				<div class="m-rating-note">
+					<p>{{ rating.note }}</p>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+	</section>
+	<hr>
+	<section id="project_rating">
+		<div class="row">
+			<h2>Skills</h2>
+		</div>
+		{% for skill in page.skills %}
+		<div class="m-skill row">
+			<div class="m-skill-title large-4 column">
+				<h4 class="no-margin">{{ skill.name | capitalize }}</h4 class="no-margin">
+			</div>
+			<div class="m-skill-rating large-8 column">
+				<div class="progress"><span class="meter text-right" style="width:{{ skill.level | times:100 }}%"><strong>{{ skill.level | times:10 }}</strong>/10</span></div>
+			</div>
+		</div>
+		{% endfor %}
+	</section>
+	<hr>
+    <section id="project_content" class="row">
+  		<div class="large-12 column">
+  			{{ content }}
+  		</div>
+    </section>
+{% include foot.html %}
