@@ -17,7 +17,7 @@ This project was inspired by a drawing by [@jphoenix24](https://twitter.com/jpho
 
 # What's going on here
 
-This is a basic starter template for Github pages. Just fork the code and run it as a github pages. You can see an example of this project at [dhornbein.github.io/project-outline](//dhornbein.github.io/project-outline)
+This is a basic starter template for Github pages. Just fork the code and run it as a github pages. You can see an example of this project at [dhornbein.github.io/project-outline](http://dhornbein.github.io/project-outline)
 
 ## The project file
 
